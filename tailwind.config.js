@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import { withUt } from "uploadthing/tw";
-module.exports  = withUt({
+
+export default  withUt({
     darkMode: ["class"],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",

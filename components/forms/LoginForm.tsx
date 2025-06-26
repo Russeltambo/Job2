@@ -82,7 +82,7 @@ export async function LoginForm() {
                   "use server";
 
                   await signIn("google", {
-                    redirectTo: "/",
+                    redirectTo: "/onboarding",
                   });
                 }}
               >
@@ -99,7 +99,7 @@ export async function LoginForm() {
                   "use server";
 
                   await signIn("github", {
-                    redirectTo: "/",
+                    redirectTo: "/onboarding",
                   });
                 }}
               >
