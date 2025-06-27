@@ -72,6 +72,7 @@ export function CompanyForm() {
                 <FormControl>
                   <Input placeholder="Enter Company Name" {...field} />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -109,6 +110,7 @@ export function CompanyForm() {
                     </SelectGroup>
                   </SelectContent>
                 </Select>
+                <FormMessage />
               </FormItem>
             )}
           />

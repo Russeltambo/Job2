@@ -16,24 +16,21 @@ export async function Navbar() {
             Job<span className="text-primary">Russel</span>
           </h1>
         </Link>
-        <div className="flex items-center gap-4">
+        
+        {/* desktop navigation */}
+        <div className="hidden md:flex items-center gap-5">
           <ThemeToggle />
+          <Link className={buttonVariants({ size: "lg" })} href="/post-job">
+            Post Job
+          </Link>
           {session?.user ? (
-            <form
-              action={async () => {
-                "use server";
-                await signOut({ redirectTo: "/" });
-              }}
-            >
-              <Button>Logout</Button>
-            </form>
+            <p>User dropdown</p>
           ) : (
             <Link
-              href="/"
-              className={buttonVariants({ variant: "outline", size: "lg" })}
-            >
-              Login
-            </Link>
+              href="/login"
+              className={buttonVariants({ variant: "outline", size: "lg" })}>
+                Login
+              </Link>
           )}
         </div>
       </nav>
