@@ -4,6 +4,7 @@ import Image from "next/image";
 import {Button, buttonVariants} from "../ui/button"
 import { ThemeToggle } from "./ThemeToggle";
 import { auth, signOut } from "@/app/utils/auth";
+import { UserDropdown } from "./UserDropdown";
 
 
 export async function Navbar() {
@@ -24,7 +25,10 @@ export async function Navbar() {
             Post Job
           </Link>
           {session?.user ? (
-            <p>User dropdown</p>
+            <UserDropdown 
+              email={session.user.email as string} 
+              name={session.user.name as string} 
+              image={session.user.image as string}  />
           ) : (
             <Link
               href="/login"
